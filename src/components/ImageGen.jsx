@@ -58,6 +58,12 @@ const ImageGenerator = () => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleGenerateImage();
+    }
+  };
+
   return (
     <ChakraProvider className='bg-dark w-50'>
       <Heading className="text-center"><span className='text-primary'>AI Image </span> Generator</Heading>
@@ -66,7 +72,6 @@ const ImageGenerator = () => {
           fontSize: '1.1rem',
           margin: '0 auto',
           width: '80%',
-
           fontWeight: '200',
         }}>Dream it up, then add it to your design. Watch your words and phrases transform into beautiful images with the best AI image generator apps available at your fingertips. Stand out with an image perfect for your project.</p>
       </div>
@@ -86,11 +91,11 @@ const ImageGenerator = () => {
             backgroundColor={'#fff'}
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
+            onKeyPress={handleKeyPress} // Trigger image generation on "Enter" key press
           />
           <button className="btn btn-outline-primary mt-3" style={{
             fontSize: '1.1rem',
             fontWeight: '400',
-
           }} onClick={handleGenerateImage}>Generate Image</button>
         </div>
 
@@ -121,7 +126,6 @@ const ImageGenerator = () => {
             <button className="btn btn-outline-success mt-3" style={{
               fontSize: '1.1rem',
               fontWeight: '400',
-
             }} onClick={handleDownloadImage}>Download Image</button>
           )}
         </div>
