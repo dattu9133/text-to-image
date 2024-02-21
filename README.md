@@ -64,7 +64,11 @@ You can customize the application according to your requirements:
 
 ## Deployment
 
-The application is currently hosted on Netlify for easy access. To deploy your own instance:
+The application is currently hosted on Netlify for easy access.
+
+## View Hosted Application
+
+You can access the hosted application [here](https://text-to-image-ai-stable.netlify.app/).
 
 
 ## Contributors
