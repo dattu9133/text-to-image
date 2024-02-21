@@ -69,8 +69,7 @@ The application is currently hosted on Netlify for easy access. To deploy your o
 
 ## Contributors
 
-- [Your Name](https://github.com/your-username)
-- [Contributor Name](https://github.com/contributor-username)
+- [Datta sai Moganti ](https://github.com/dattu9133)
 
 Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests.
 
