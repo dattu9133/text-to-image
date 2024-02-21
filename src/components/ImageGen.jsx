@@ -14,7 +14,7 @@ const ImageGenerator = () => {
   const [inputText, setInputText] = useState('');
   const [generatedImage, setGeneratedImage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const Api = "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";
+  const Api = "your_api_key_here";
 
   const handleGenerateImage = () => {
     setLoading(true);
