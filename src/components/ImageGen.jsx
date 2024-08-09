@@ -9,21 +9,21 @@ import {
   SkeletonCircle,
   SkeletonText,
 } from "@chakra-ui/react";
+import { token } from './token';
 
 const ImageGenerator = () => {
   const [inputText, setInputText] = useState('');
   const [generatedImage, setGeneratedImage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const Api = "your_api_key_here";
 
   const handleGenerateImage = () => {
     setLoading(true);
     try {
-      fetch('https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4', {
+      fetch('https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
-          'Authorization': `Bearer ${Api}`
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({ inputs: inputText }),
       })
@@ -113,8 +113,9 @@ const ImageGenerator = () => {
                 boxShadow: '0 0 20px rgba(256,256,256,0.3)',
                 borderRadius: '5px',
                 width: '100%',
-                aspectRatio: '16/9',
-                objectFit: 'fill',
+                height: '100%',
+                // aspectRatio: '16/9',
+                objectFit: 'cover',
                 objectPosition: 'center center',
               }}
               className="img-fluid"
